@@ -43,9 +43,15 @@ title_list = load_movie_titles('resources/data/movies.csv')
 # App declaration
 def main():
 
+    # Creating load data sign on sidebar
+    st.sidebar.subheader(":heavy_check_mark: Data is loaded")
+    st.sidebar.text_input("link to train data", "https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/data/movies.csv")
+
     # DO NOT REMOVE the 'Recommender System' option below, however,
     # you are welcome to add more options to enrich your app.
-    page_options = ["Recommender System","Solution Overview"]
+    # Creating multiple pages
+    st.sidebar.title("Menu")
+    page_options = ["Recommender System","Solution Overview","Our Mission","Machine Learning","Data Exploration","Our Products and Services","About Us"]
 
     # -------------------------------------------------------------------
     # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
@@ -106,6 +112,65 @@ def main():
 
     # You may want to add more sections here for aspects such as an EDA,
     # or to provide your business pitch.
+
+    # Created Our Mission Page
+    if page_selection == "Our Mission":
+        st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/OurMission.png",
+                 use_column_width=True )
+
+    # Created Machine Learning Page
+    if page_selection == "Machine Learning":
+        st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/MachineLearning.png",
+                 use_column_width=True)
+
+    # Created Data Exploration page
+    if page_selection == "Data Exploration":
+        st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/DataExploration.png",
+                 use_column_width=True)
+
+    # Created Our Products & Services page
+    if page_selection == "Our Products and Services":
+        st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/Products.png",
+                 use_column_width=True)
+
+    # Created About Us page
+    if page_selection == "About Us":
+        st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/AboutUs.png",
+                 use_column_width=True)
+
+        # Our Company background story
+        st.title("OUR STORY")
+        st.markdown("""
+                    OneFlix started in the Summer of 2019.
+
+                    A group of individuals came together with the same vision:
+
+                            Create recommender systems for content that users would find interesting.
+
+                    A concept now brought to perfection by OneFlix of creators.
+
+                    Today, OneFlix are helping users in selecting various content that peaks their interests and exposing them to sources and sites that they would normally overlook which
+                    could be of interest for them.
+
+                    OneFlix features a variety of recommender systems that users can make use of, using a broad spectrum of data preprocessing techniques and parameters.
+
+                    Simply put: There's content for every user, mindset and style.
+                    """)
+
+        # Content creators who worked on this assignment
+        st.title("MEET THE TEAM")
+
+        st.header("Makhosazane Seroka")
+
+        st.header("Mixo Lucrencia Shitlhangu")
+
+        st.header("Percy Mokone")
+
+        st.header("Precious Sekgathume")
+
+        st.header("Sevha Vukeya")
+
+        st.header("Suvarna Chetty")
 
 
 if __name__ == '__main__':
