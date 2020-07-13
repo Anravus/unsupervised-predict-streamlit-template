@@ -43,6 +43,8 @@ title_list = load_movie_titles('resources/data/movies.csv')
 # App declaration
 def main():
 
+    st.sidebar.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/OneFlixS%20(1).png",
+                     use_column_width=True)
     # Creating load data sign on sidebar
     st.sidebar.subheader(":heavy_check_mark: Data is loaded")
     st.sidebar.text_input("link to train data", "https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/data/movies.csv")
@@ -117,6 +119,31 @@ def main():
     if page_selection == "Our Mission":
         st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/OurMission.png",
                  use_column_width=True )
+
+        st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/OneFlixS%20(2).png",
+                 use_column_width=True)
+        st.title("🎬 OneFlix 🎬")
+        st.markdown("""
+                    Wouldn't you like to know what movie to watch next. Tired of the same boring movies. Would you not like to have a tailored movie list just for you.
+                    Well (company name) looks to do just that. Our highly skilled team have designed a system to do everything above and more.
+                    We use state of the art Unsupervised Machine Learning Technique to enhance your viewing experience and bring the best movie recommendations with just a few clicks.
+                    Join us for the next level viewing experience.
+                    Try out our app now and experience the new way.
+                    Advance AI is just one click away
+                    """)
+
+        st.header("Synopsis")
+        st.markdown("""
+                    In today’s technology driven world, recommender systems are socially and economically critical for ensuring that individuals can make appropriate choices surrounding
+                    the content they engage with on a daily basis. One application where this is especially true surrounds movie content recommendations; where intelligent algorithms can
+                    help viewers find great titles from tens of thousands of options.
+
+                    With this context, EDSA is challenging you to construct a recommendation algorithm based on content or collaborative filtering, capable of accurately predicting how a
+                    user will rate a movie they have not yet viewed based on their historical preferences.
+
+                    Providing an accurate and robust solution to this challenge has immense economic potential, with users of the system being exposed to content they would like to view or
+                    purchase - generating revenue and platform affinity. 
+                    """)
 
     # Created Machine Learning Page
     if page_selection == "Machine Learning":
@@ -548,9 +575,6 @@ def main():
 
         toc2.header("🔗 Difference between Supervised & Unsupervised 🔗")
         st.video("https://youtu.be/rHeaoaiBM6Y")
-
-
-
 
         toc2.generate()
 
