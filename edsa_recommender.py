@@ -53,7 +53,7 @@ def main():
     # you are welcome to add more options to enrich your app.
     # Creating multiple pages
     st.sidebar.title("Menu")
-    page_options = ["Recommender System","Solution Overview","Our Mission","Machine Learning","Data Exploration","Our Products and Services","About Us","References"]
+    page_options = ["Recommender System","Solution Overview","Our Mission","History Of Cinema","Machine Learning","Data Exploration","Our Products and Services","About Us","References"]
 
     # -------------------------------------------------------------------
     # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
@@ -142,8 +142,183 @@ def main():
                     user will rate a movie they have not yet viewed based on their historical preferences.
 
                     Providing an accurate and robust solution to this challenge has immense economic potential, with users of the system being exposed to content they would like to view or
-                    purchase - generating revenue and platform affinity. 
+                    purchase - generating revenue and platform affinity.
                     """)
+
+    # Created a history of cinema page
+    if page_selection == "History Of Cinema":
+        st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/History.png",
+                 use_column_width=True )
+
+        st.sidebar.title("Table of contents")
+        st.sidebar.info("The table of contents is interactive")
+        class Toc:
+
+            def __init__(self):
+                self._items = []
+                self._placeholder = None
+
+            def title(self, text):
+                self._markdown(text, "h1")
+
+            def header(self, text):
+                self._markdown(text, "h2", " " * 2)
+
+            def subheader(self, text):
+                self._markdown(text, "h3", " " * 4)
+
+            def placeholder(self, sidebar = False ):
+                self._placeholder = st.sidebar
+
+            def generate(self):
+                if self._placeholder:
+                    self._placeholder.markdown("\n".join(self._items), unsafe_allow_html=True)
+
+            def _markdown(self, text, level, space=""):
+                key = "".join(filter(str.isalnum, text)).lower()
+
+                st.markdown(f"<{level} id='{key}'>{text}</{level}>", unsafe_allow_html=True)
+                self._items.append(f"{space}* <a href='#{key}'>{text}</a>")
+
+
+        toc = Toc()
+
+        toc.placeholder()
+
+        st.markdown("""
+                    Cinematography is the illusion of movement by the recording and subsequent rapid projection of many still photographic pictures on a screen. Originally a product of
+                    19th-century scientific endeavour, cinema has become a medium of mass entertainment and communication, and today it is a multi-billion-dollar industry.
+                    """)
+
+        toc.title("WHO INVENTED CINEMA?")
+        st.markdown("""
+                    No one person invented cinema. However, in 1891 the Edison Company successfully demonstrated a prototype of the Kinetoscope, which enabled one person at a time to view
+                    moving pictures.
+
+                    The first public Kinetoscope demonstration took place in 1893. By 1894 the Kinetoscope was a commercial success, with public parlours established around the world.
+
+                    The first to present projected moving pictures to a paying audience were the Lumière brothers in December 1895 in Paris, France. They used a device of their own making,
+                    the Cinématographe, which was a camera, a projector and a film printer all in one.
+                    """)
+
+        toc.title("WHAT WERE EARLY FILMS LIKE?")
+        st.markdown("""
+                    At first, films were very short, sometimes only a few minutes or less. They were shown at fairgrounds, music halls, or anywhere a screen could be set up and a room darkened.
+                    Subjects included local scenes and activities, views of foreign lands, short comedies and newsworthy events.
+
+                    The films were accompanied by lectures, music and a lot of audience participation. Although they did not have synchronised dialogue, they were not ‘silent’ as they are
+                    sometimes described.
+                    """)
+
+        toc.title("THE RISE OF THE FILM INDUSTRY")
+        st.markdown("""
+                    By 1914, several national film industries were established. At this time, Europe, Russia and Scandinavia were the dominant industries; America was much less important.
+                    Films became longer and storytelling, or narrative, became the dominant form.
+
+                    As more people paid to see movies, the industry which grew around them was prepared to invest more money in their production, distribution and exhibition, so large
+                    studios were established and dedicated cinemas built. The First World War greatly affected the film industry in Europe, and the American industry grew in relative importance.
+
+                    The first 30 years of cinema were characterised by the growth and consolidation of an industrial base, the establishment of the narrative form, and refinement of
+                    technology.
+                    """)
+
+        toc.title("ADDING COLOUR")
+        st.markdown("""
+                    Colour was first added to black-and-white movies through hand colouring, tinting, toning and stencilling.
+
+                    By 1906, the principles of colour separation were used to produce so-called ‘natural colour’ moving images with the British Kinemacolor process, first presented to the
+                    public in 1909.
+
+                    Kinemacolor was primarily used for documentary (or ‘actuality’) films, such as the epic With Our King and Queen Through India (also known as The Delhi Durbar) of 1912,
+                    which ran for over 2 hours in total.
+
+                    The early Technicolor processes from 1915 onwards were cumbersome and expensive, and colour was not used more widely until the introduction of its three‑colour process
+                    in 1932. It was used for films such as Gone With the Wind and The Wizard of Oz (both 1939) in Hollywood and A Matter of Life and Death (1946) in the UK.
+                    """)
+
+        toc.title("ADDING SOUND")
+        st.markdown("""
+                    The first attempts to add synchronised sound to projected pictures used phonographic cylinders or discs.
+
+                    The first feature-length movie incorporating synchronised dialogue, The Jazz Singer (USA, 1927), used the Warner Brothers’ Vitaphone system, which employed a separate
+                    record disc with each reel of film for the sound.
+
+                    This system proved unreliable and was soon replaced by an optical, variable density soundtrack recorded photographically along the edge of the film, developed originally
+                    for newsreels such as Movietone.
+                    """)
+
+        toc.title("CINEMA’S GOLDEN AGE")
+        st.markdown("""
+                    By the early 1930s, nearly all feature-length movies were presented with synchronised sound and, by the mid-1930s, some were in full colour too. The advent of sound
+                    secured the dominant role of the American industry and gave rise to the so-called ‘Golden Age of Hollywood’.
+
+                    During the 1930s and 1940s, cinema was the principal form of popular entertainment, with people often attending cinemas twice a week. Ornate ’super’ cinemas or ‘picture
+                    palaces’, offering extra facilities such as cafés and ballrooms, came to towns and cities; many of them could hold over 3,000 people in a single auditorium.
+
+                    In Britain, the highest attendances occurred in 1946, with over 31 million visits to the cinema each week.
+                    """)
+
+        toc.title("WHAT IS THE ASPECT RATIO?")
+        st.markdown("""
+                    Thomas Edison had used perforated 35mm film in the Kinetoscope, and in 1909 this was adopted as the worldwide industry standard. The picture had a width-to-height
+                    relationship—known as the aspect ratio—of 4:3 or 1.33:1. The first number refers to the width of the screen, and the second to the height. So for example, for every 4
+                    centimetres in width, there will be 3 in height.
+
+                    With the advent of optical sound, the aspect ratio was adjusted to 1.37:1. This is known as the ‘Academy ratio’, as it was officially approved by the Academy of Motion
+                    Picture Arts and Sciences (the Oscars people) in 1932.
+
+                    Although there were many experiments with other formats, there were no major changes in screen ratios until the 1950s.
+                    """)
+
+        st.title("HOW DID CINEMA COMPETE WITH TELEVISION?")
+        st.markdown("""
+                    The introduction of television in America prompted a number of technical experiments designed to maintain public interest in cinema.
+
+                    In 1952, the Cinerama process, using three projectors and a wide, deeply curved screen together with multi-track surround sound, was premiered. It had a very large aspect
+                    ratio of 2.59:1, giving audiences a greater sense of immersion, and proved extremely popular.
+
+                    However, Cinerama was technically complex and therefore expensive to produce and show. Widescreen cinema was not widely adopted by the industry until the invention of
+                    CinemaScope in 1953 and Todd‑AO in 1955. Both processes used single projectors in their presentation.
+
+                    CinemaScope ‘squeezed’ images on 35mm film; when projected, they were expanded laterally by the projector lens to fit the screen. Todd-AO used film with a width of 70mm.
+                    By the end of the 1950s, these innovations had effectively changed the shape of the cinema screen, with aspect ratios of either 2.35:1 or 1.66:1 becoming standard.
+                    Stereo sound, which had been experimented with in the 1940s, also became part of the new widescreen experience.
+
+                    Specialist large-screen systems using 70mm film were also developed. The most successful of these has been IMAX, which as of 2020 has over 1,500 screens around the world.
+                    For many years IMAX cinemas have shown films specially made in its unique 2D or 3D formats but more recently they have shown popular mainstream feature films which have been
+                    digitally re-mastered in the IMAX format, often with additional scenes or 3D effects.
+                    """)
+
+        toc.title("HOW HAVE CINEMA ATTENDANCE FIGURES CHANGED?")
+        st.markdown("""
+                    While cinemas had some success in fighting the competition of television, they never regained the position and influence they held in the 1930s and 40s, and over the next
+                    30 years audiences dwindled. By 1984 cinema attendances in Britain had declined to one million a week.
+
+                    By the late 2000s, however, that number had trebled. The first British multiplex was built in Milton Keynes in 1985, sparking a boom in out-of-town multiplex cinemas.
+
+                    Today, most people see films on television, whether terrestrial, satellite or subscription video on demand (SVOD) services. Streaming film content on computers, tablets
+                    and mobile phones is becoming more common as it proves to be more convenient for modern audiences and lifestyles.
+
+                    Although America still appears to be the most influential film industry, the reality is more complex. Many films are produced internationally—either made in various
+                    countries or financed by multinational companies that have interests across a range of media.
+                    """)
+
+        toc.title("WHAT’S NEXT?")
+        st.markdown("""
+                    In the past 20 years, film production has been profoundly altered by the impact of rapidly improving digital technology. Most mainstream productions are now shot on
+                    digital formats with subsequent processes, such as editing and special effects, undertaken on computers.
+
+                    Cinemas have invested in digital projection facilities capable of producing screen images that rival the sharpness, detail and brightness of traditional film projection.
+                    Only a small number of more specialist cinemas have retained film projection equipment.
+
+                    In the past few years there has been a revival of interest in 3D features, sparked by the availability of digital technology. Whether this will be more than a short-term
+                    phenomenon (as previous attempts at 3D in the 1950s and 1980s had been) remains to be seen, though the trend towards 3D production has seen greater investment and industry
+                    commitment than before.
+                    """)
+
+
+
+        toc.generate()
 
     # Created Machine Learning Page
     if page_selection == "Machine Learning":
@@ -668,7 +843,11 @@ def main():
                     https://www.javatpoint.com/regression-vs-classification-in-machine-learning
                     https://searchenterpriseai.techtarget.com/definition/supervised-learning
                     https://www.guru99.com/unsupervised-machine-learning.html
-
+                    https://searchenterpriseai.techtarget.com/definition/supervised-learning
+                    https://www.analyticssteps.com/blogs/7-types-regression-technique-you-should-know-machine-learning
+                    https://www.listendata.com/2018/03/regression-analysis.html
+                    https://www.analyticsinsight.net/6-types-of-regressions-have-you-heard/
+                    https://www.scienceandmediamuseum.org.uk/objects-and-stories/very-short-history-of-cinema
                     """)
 
 
