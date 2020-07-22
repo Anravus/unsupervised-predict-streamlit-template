@@ -758,10 +758,31 @@ def main():
         st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/DataExploration.png",
                  use_column_width=True)
 
+        from bokeh.models.widgets import Div
+
+        if st.button('Go to Streamlit'):
+            js = "window.open('https://app.powerbi.com/view?r=eyJrIjoiZGNiYWFjODMtZmNiMy00NDcwLWExZDAtZGQzZGMyOTFiN2NjIiwidCI6IjQ0MTEyYTBhLTlmN2ItNDNhNi05Y2FhLWY0NTA0NDFmMjlhNSIsImMiOjl9&pageName=ReportSection/')"  # New tab or window
+            js = "window.location.href = 'https://app.powerbi.com/view?r=eyJrIjoiZGNiYWFjODMtZmNiMy00NDcwLWExZDAtZGQzZGMyOTFiN2NjIiwidCI6IjQ0MTEyYTBhLTlmN2ItNDNhNi05Y2FhLWY0NTA0NDFmMjlhNSIsImMiOjl9&pageName=ReportSection/'"  # Current tab
+            html = '<img src onerror="{}">'.format(js)
+            div = Div(text=html)
+            st.bokeh_chart(div)
+
+        st.markdown("""
+    <iframe width="600" height="606" src="https://app.powerbi.com/view?r=eyJrIjoiZGNiYWFjODMtZmNiMy00NDcwLWExZDAtZGQzZGMyOTFiN2NjIiwidCI6IjQ0MTEyYTBhLTlmN2ItNDNhNi05Y2FhLWY0NTA0NDFmMjlhNSIsImMiOjl9&pageName=ReportSection" frameborder="0" style="border:0" allowfullscreen></iframe>
+    """, unsafe_allow_html=True)
+
+
+
     # Created Our Products & Services page
     if page_selection == "Our Products and Services":
         st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/Products.png",
                  use_column_width=True)
+
+        #st.markdown("""
+    #<iframe width="600" height="606" src="https://www.kaggle.com/jsab16/sql-and-python-analysis-on-world-indicators" frameborder="0" style="border:0" allowfullscreen></iframe>
+    #""", unsafe_allow_html=True)
+
+
 
         # OneFlix products offered
         st.title("Products and Services offered")
