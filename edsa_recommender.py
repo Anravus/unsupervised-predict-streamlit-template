@@ -124,25 +124,24 @@ def main():
                  use_column_width=True)
         st.title("🎬 OneFlix 🎬")
         st.markdown("""
-                    Wouldn't you like to know what movie to watch next. Tired of the same boring movies. Would you not like to have a tailored movie list just for you.
-                    Well (company name) looks to do just that. Our highly skilled team have designed a system to do everything above and more.
-                    We use state of the art Unsupervised Machine Learning Technique to enhance your viewing experience and bring the best movie recommendations with just a few clicks.
+                    Wouldn't you like to know what movie to watch next. Tired of the same old boring movies. Would you not like to have a tailored movie experience just for you.
+                    Well, OneFlix looks to do just that. Our highly skilled team of data scientists have designed a system that will do all of that and more!
+
+                    We use state of the art Unsupervised Machine Learning techniques to enhance your viewing experience and bring you the best movie recommendations within just a few clicks.
+
                     Join us for the next level viewing experience.
                     Try out our app now and experience the new way.
-                    Advance AI is just one click away
+                    Advance AI is just one click away.
                     """)
 
         st.header("Synopsis")
         st.markdown("""
                     In today’s technology driven world, recommender systems are socially and economically critical for ensuring that individuals can make appropriate choices surrounding
                     the content they engage with on a daily basis. One application where this is especially true surrounds movie content recommendations; where intelligent algorithms can
-                    help viewers find great titles from tens of thousands of options.
-
-                    With this context, EDSA is challenging you to construct a recommendation algorithm based on content or collaborative filtering, capable of accurately predicting how a
-                    user will rate a movie they have not yet viewed based on their historical preferences.
+                    help viewers find great titles from tens of thousands of options and discover loads more.
 
                     Providing an accurate and robust solution to this challenge has immense economic potential, with users of the system being exposed to content they would like to view or
-                    purchase - generating revenue and platform affinity.
+                    purchase - generating revenue and platform affinity, while also enhancing consumer satisfaction. 
                     """)
 
     # Created a history of cinema page
