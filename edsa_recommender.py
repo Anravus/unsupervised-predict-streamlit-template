@@ -825,8 +825,44 @@ def main():
         st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/AboutUs.png",
                  use_column_width=True)
 
+        # table of contents on the sidebar
+        st.sidebar.title("Table of contents")
+        st.sidebar.info("The table of contents is interactive")
+        class Toc3:
+            def __init__(self):
+                self._items = []
+                self._placeholder = None
+
+            def title(self, text):
+                self._markdown(text, "h1")
+
+            def header(self, text):
+                self._markdown(text, "h2", " " * 2)
+
+            def subheader(self, text):
+                self._markdown(text, "h3", " " * 4)
+
+            def placeholder(self, sidebar = False ):
+                self._placeholder = st.sidebar
+
+            def generate(self):
+                if self._placeholder:
+                    self._placeholder.markdown("\n".join(self._items), unsafe_allow_html=True)
+
+            def _markdown(self, text, level, space=""):
+                key = "".join(filter(str.isalnum, text)).lower()
+
+                st.markdown(f"<{level} id='{key}'>{text}</{level}>", unsafe_allow_html=True)
+                self._items.append(f"{space}* <a href='#{key}'>{text}</a>")
+
+
+        toc3 = Toc3()
+
+        toc3.placeholder()
+
+
         # Our Company background story
-        st.title("OUR STORY")
+        toc3.title("OUR STORY")
         st.markdown("""
                     OneFlix started in the Summer of 2019.
 
@@ -845,19 +881,26 @@ def main():
                     """)
 
         # Content creators who worked on this assignment
-        st.title("MEET THE TEAM")
+        toc3.title("MEET THE TEAM")
 
-        st.header("Makhosazane Seroka")
+        toc3.header("Makhosazane Seroka")
 
-        st.header("Mixo Lucrencia Shitlhangu")
+        toc3.header("Mixo Lucrencia Shitlhangu")
 
-        st.header("Percy Mokone")
+        toc3.header("Percy Mokone")
 
-        st.header("Precious Sekgathume")
+        toc3.header("Precious Sekgathume")
 
-        st.header("Sevha Vukeya")
+        toc3.header("Sevha Vukeya")
 
-        st.header("Suvarna Chetty")
+        toc3.header("Suvarna Chetty")
+        st.markdown("""
+                    Innovative and performance-driven Entrepreneur with a deep passion for technology and business. Detail-orientated data science student with a background in Accounting Science.
+                    Passionate with a zest for solving problems.
+                    """)
+        st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/Suvarna.jpeg", caption = '"Give me speckled eggs and a computer and I can take on the world"- Suvarna', use_column_width=True)
+
+        toc3.generate()
 
     # Created a references page
     if page_selection == "References":
