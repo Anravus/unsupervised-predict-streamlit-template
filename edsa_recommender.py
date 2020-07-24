@@ -141,7 +141,7 @@ def main():
                     help viewers find great titles from tens of thousands of options and discover loads more.
 
                     Providing an accurate and robust solution to this challenge has immense economic potential, with users of the system being exposed to content they would like to view or
-                    purchase - generating revenue and platform affinity, while also enhancing consumer satisfaction. 
+                    purchase - generating revenue and platform affinity, while also enhancing consumer satisfaction.
                     """)
 
     # Created a history of cinema page
@@ -184,12 +184,15 @@ def main():
 
         toc.placeholder()
 
+        st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/A%20short%20history.png",
+                 use_column_width=True)
+
         st.markdown("""
                     Cinematography is the illusion of movement by the recording and subsequent rapid projection of many still photographic pictures on a screen. Originally a product of
                     19th-century scientific endeavour, cinema has become a medium of mass entertainment and communication, and today it is a multi-billion-dollar industry.
                     """)
 
-        toc.title("WHO INVENTED CINEMA?")
+        toc.title("🎥 Who invented cinema? 🎥")
         st.markdown("""
                     No one person invented cinema. However, in 1891 the Edison Company successfully demonstrated a prototype of the Kinetoscope, which enabled one person at a time to view
                     moving pictures.
@@ -199,8 +202,10 @@ def main():
                     The first to present projected moving pictures to a paying audience were the Lumière brothers in December 1895 in Paris, France. They used a device of their own making,
                     the Cinématographe, which was a camera, a projector and a film printer all in one.
                     """)
+        st.image("https://www.scienceandmediamuseum.org.uk/sites/default/files/styles/embedded_image/public/2020-06/Kinetophonebis1_0.jpg?itok=TWbBGPML", caption ="Publicity image of Edison Kinetophone, c.1895" )
+        st.image("https://www.scienceandmediamuseum.org.uk/sites/default/files/styles/smg_carousel_zoom/public/347701996.jpg", caption = "Lumière Cinématographe, c.1896", use_column_width=True)
 
-        toc.title("WHAT WERE EARLY FILMS LIKE?")
+        toc.title("🎞️ What were early films like? 🎞️")
         st.markdown("""
                     At first, films were very short, sometimes only a few minutes or less. They were shown at fairgrounds, music halls, or anywhere a screen could be set up and a room darkened.
                     Subjects included local scenes and activities, views of foreign lands, short comedies and newsworthy events.
@@ -209,7 +214,7 @@ def main():
                     sometimes described.
                     """)
 
-        toc.title("THE RISE OF THE FILM INDUSTRY")
+        toc.title("📼 The rise of the film industry 📼")
         st.markdown("""
                     By 1914, several national film industries were established. At this time, Europe, Russia and Scandinavia were the dominant industries; America was much less important.
                     Films became longer and storytelling, or narrative, became the dominant form.
@@ -221,7 +226,7 @@ def main():
                     technology.
                     """)
 
-        toc.title("ADDING COLOUR")
+        toc.title("🌈 Adding colour 🌈")
         st.markdown("""
                     Colour was first added to black-and-white movies through hand colouring, tinting, toning and stencilling.
 
@@ -234,8 +239,9 @@ def main():
                     The early Technicolor processes from 1915 onwards were cumbersome and expensive, and colour was not used more widely until the introduction of its three‑colour process
                     in 1932. It was used for films such as Gone With the Wind and The Wizard of Oz (both 1939) in Hollywood and A Matter of Life and Death (1946) in the UK.
                     """)
+        st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/Adding%20Colour.jpg", caption = "1. Frames of stencil colour film, 2. Kinemacolor cine camera made by Moy and Bastie to Charles Urban's design(1909), 3. Advertisement for with our king and queen through India(1912), 4. Advertisement for Kinemacolor, 5. Technicolor cine camera", use_column_width =True )
 
-        toc.title("ADDING SOUND")
+        toc.title("🎼 Adding sound 🎼")
         st.markdown("""
                     The first attempts to add synchronised sound to projected pictures used phonographic cylinders or discs.
 
@@ -245,8 +251,9 @@ def main():
                     This system proved unreliable and was soon replaced by an optical, variable density soundtrack recorded photographically along the edge of the film, developed originally
                     for newsreels such as Movietone.
                     """)
+        st.image("https://www.scienceandmediamuseum.org.uk/sites/default/files/styles/embedded_image/public/2020-06/large_2017_5390__0001__0.jpg?itok=poRniSDa", use_column_width= True, caption= "Vitaphone disc, 1930.")
 
-        toc.title("CINEMA’S GOLDEN AGE")
+        toc.title("📀 Cinema's golden age 📀")
         st.markdown("""
                     By the early 1930s, nearly all feature-length movies were presented with synchronised sound and, by the mid-1930s, some were in full colour too. The advent of sound
                     secured the dominant role of the American industry and gave rise to the so-called ‘Golden Age of Hollywood’.
@@ -256,8 +263,10 @@ def main():
 
                     In Britain, the highest attendances occurred in 1946, with over 31 million visits to the cinema each week.
                     """)
+        st.image("https://www.scienceandmediamuseum.org.uk/sites/default/files/styles/embedded_image/public/2020-06/large_1983_5236_10530_1.jpg?itok=3rZUu2hD", caption = "Cinema audience, 1932, James Jarché.", use_column_width=True)
 
-        toc.title("WHAT IS THE ASPECT RATIO?")
+
+        toc.title("↖️ What is the aspect ratio? ↘️")
         st.markdown("""
                     Thomas Edison had used perforated 35mm film in the Kinetoscope, and in 1909 this was adopted as the worldwide industry standard. The picture had a width-to-height
                     relationship—known as the aspect ratio—of 4:3 or 1.33:1. The first number refers to the width of the screen, and the second to the height. So for example, for every 4
@@ -269,7 +278,7 @@ def main():
                     Although there were many experiments with other formats, there were no major changes in screen ratios until the 1950s.
                     """)
 
-        st.title("HOW DID CINEMA COMPETE WITH TELEVISION?")
+        st.title("📺 How did cinema compete with television? 📺")
         st.markdown("""
                     The introduction of television in America prompted a number of technical experiments designed to maintain public interest in cinema.
 
@@ -287,8 +296,9 @@ def main():
                     For many years IMAX cinemas have shown films specially made in its unique 2D or 3D formats but more recently they have shown popular mainstream feature films which have been
                     digitally re-mastered in the IMAX format, often with additional scenes or 3D effects.
                     """)
+        st.image("https://www.scienceandmediamuseum.org.uk/sites/default/files/styles/embedded_image/public/2020-06/BR180001.jpeg?itok=V6nJu0ZU", caption= "Installation of IMAX screen at the museum, 1983.", use_column_width= True)
 
-        toc.title("HOW HAVE CINEMA ATTENDANCE FIGURES CHANGED?")
+        toc.title("👨‍👩‍👧‍👧 How have cinema attendance figueres changed? 👨‍👩‍👧‍👧")
         st.markdown("""
                     While cinemas had some success in fighting the competition of television, they never regained the position and influence they held in the 1930s and 40s, and over the next
                     30 years audiences dwindled. By 1984 cinema attendances in Britain had declined to one million a week.
@@ -301,8 +311,9 @@ def main():
                     Although America still appears to be the most influential film industry, the reality is more complex. Many films are produced internationally—either made in various
                     countries or financed by multinational companies that have interests across a range of media.
                     """)
+        st.image("https://www.scienceandmediamuseum.org.uk/sites/default/files/styles/embedded_image/public/2020-06/1200px-MK%2C_The_Point_-_panoramio.jpg?itok=_TMJGmty", caption= "The Point multiplex cinema, Milton Keynes.", use_column_width= True)
 
-        toc.title("WHAT’S NEXT?")
+        toc.title("⏭️ What's next? ⏭️")
         st.markdown("""
                     In the past 20 years, film production has been profoundly altered by the impact of rapidly improving digital technology. Most mainstream productions are now shot on
                     digital formats with subsequent processes, such as editing and special effects, undertaken on computers.
