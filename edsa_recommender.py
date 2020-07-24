@@ -36,6 +36,7 @@ import numpy as np
 from utils.data_loader import load_movie_titles
 from recommenders.collaborative_based import collab_model
 from recommenders.content_based import content_model
+from bokeh.models.widgets import Div
 
 # Data Loading
 title_list = load_movie_titles('resources/data/movies.csv')
@@ -770,18 +771,17 @@ def main():
         st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/DataExploration.png",
                  use_column_width=True)
 
-        from bokeh.models.widgets import Div
+        st.markdown("""
+    <iframe width="600" height="375" src="https://app.powerbi.com/view?r=eyJrIjoiMWQ3YTE1MjgtODQ0My00Mzk0LThhZTAtYmQ5ZmFlNDA4ZmQxIiwidCI6IjQ0MTEyYTBhLTlmN2ItNDNhNi05Y2FhLWY0NTA0NDFmMjlhNSIsImMiOjl9&pageName=ReportSection/" frameborder="0" style="border:0" allowfullscreen></iframe>
+    """, unsafe_allow_html=True)
 
-        if st.button('Go to Streamlit'):
+        if st.button('Go to Dashboard'):
             js = "window.open('https://app.powerbi.com/view?r=eyJrIjoiMWQ3YTE1MjgtODQ0My00Mzk0LThhZTAtYmQ5ZmFlNDA4ZmQxIiwidCI6IjQ0MTEyYTBhLTlmN2ItNDNhNi05Y2FhLWY0NTA0NDFmMjlhNSIsImMiOjl9&pageName=ReportSection/')"  # New tab or window
             js = "window.location.href = 'https://app.powerbi.com/view?r=eyJrIjoiMWQ3YTE1MjgtODQ0My00Mzk0LThhZTAtYmQ5ZmFlNDA4ZmQxIiwidCI6IjQ0MTEyYTBhLTlmN2ItNDNhNi05Y2FhLWY0NTA0NDFmMjlhNSIsImMiOjl9&pageName=ReportSection/'"  # Current tab
             html = '<img src onerror="{}">'.format(js)
             div = Div(text=html)
             st.bokeh_chart(div)
-
-        st.markdown("""
-    <iframe width="600" height="606" src="https://app.powerbi.com/view?r=eyJrIjoiMWQ3YTE1MjgtODQ0My00Mzk0LThhZTAtYmQ5ZmFlNDA4ZmQxIiwidCI6IjQ0MTEyYTBhLTlmN2ItNDNhNi05Y2FhLWY0NTA0NDFmMjlhNSIsImMiOjl9&pageName=ReportSection/" frameborder="0" style="border:0" allowfullscreen></iframe>
-    """, unsafe_allow_html=True)
+        st.info("Click on the 'Go to Dashboard' button to go to the webpage")
 
 
     # Created Our Products & Services page
