@@ -418,7 +418,7 @@ def main():
         st.image("https://miro.medium.com/max/1400/1*t8igzDSUC-1qaJQRQpbwBA.png",
                  use_column_width = True)
         toc2.header("📚 Classification 📚")
-        toc2.subheader("Brief Overview")
+        toc2.subheader("Brief Overview: Classification")
         st.markdown("""
                     Classification is a process of categorizing a given set of data into classes, It can be performed on both structured or unstructured data. The process starts with
                     predicting the class of given data points. The classes are often referred to as target, label or categories.
@@ -546,7 +546,7 @@ def main():
 
 
         toc2.header("📈 Regression 📈")
-        toc2.subheader("Brief Overview")
+        toc2.subheader("Brief Overview: Regression")
         st.markdown("""
                     Regression is another form of supervised learning. The difference between classification and regression is that regression outputs a number rather than a class.
                     Therefore, regression is useful when predicting number based problems like stock market prices, the temperature for a given day, or the probability of an event.
@@ -685,8 +685,10 @@ def main():
                     **Hierarchical Clustering:**
 
                     Hierarchical clustering is an algorithm which builds a hierarchy of clusters. It begins with all the data which is assigned to a cluster of their own. Here, two close
-                    cluster are going to be in the same cluster. This algorithm ends when there is only one cluster left.
+                    cluster are going to be in the same cluster. This algorithm ends when there is only one cluster left.""")
+        st.image("https://lh3.googleusercontent.com/proxy/_i8jxxJl4CCrnBqqMt_83pB5L0fxLL0bglnm7TwueffGxnXYvxIMTLiQ14zNKvodo7yWmI4k9YrEzU59KttHaEbVRcLLX31NQ2zhYmw3RLBBthMmfexu34Kwe-X37a-TozasK4YDRPrEy32ZSb3e3lOqQUL_YugN-QWLfSci1-Vn6lbOrPOoJ19NIVUSwVWjwQzXZA", use_column_width=True)
 
+        st.markdown("""
                     **K-means Clustering:**
 
                     K means it is an iterative clustering algorithm which helps you to find the highest value for every iteration. Initially, the desired number of clusters are selected.
@@ -749,7 +751,7 @@ def main():
                     - Association mining identifies sets of items which often occur together in your dataset
                     - Latent variable models are widely used for data preprocessing. Like reducing the number of features in a dataset or decomposing the dataset into multiple components
                     """)
-        toc2.header("👎 Disadvantages 👎")
+        toc2.header("👎 Disadvantages of Unsupervised Learning 👎")
         st.markdown("""
                     - You cannot get precise information regarding data sorting, and the output as data used in unsupervised learning is labeled and not known
                     - Less accuracy of the results is because the input data is not known and not labeled by people in advance. This means that the machine requires to do this itself.
