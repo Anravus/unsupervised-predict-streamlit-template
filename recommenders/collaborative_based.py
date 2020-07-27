@@ -130,17 +130,17 @@ def prediction(movie_title,user_id):
     """Performs Collaborative filtering based upon a list of movies supplied
        by the app user.
 
-       Parameters
-       ----------
-       movie_list : list (str)
-            Favorite movies chosen by the app user.
-       top_n : type
-            Number of top recommendations to return to the user.
+    Parameters
+    ----------
+    movie_list : list (str)
+        Favorite movies chosen by the app user.
+    top_n : type
+        Number of top recommendations to return to the user.
 
-            Returns
-       -------
-       list (str)
-            Titles of the top-n movie recommendations to the user.
+    Returns
+    -------
+    list (str)
+        Titles of the top-n movie recommendations to the user.
 
     """
     movie_ids = pred_movies(movie_list)
