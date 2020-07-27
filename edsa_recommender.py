@@ -183,6 +183,8 @@ def main():
 
         toc = Toc()
 
+        pdf_display = f'<embed src="https://github.com/Anravus/unsupervised-predict-streamlit-template/blob/developing/resources/images/UnsupervisedPredict.pdf;UnsupervisedPredict,{UnsupervisedPredict_pdf}" width="700" height="1000" type="application/pdf">'
+        #st.file_uploader('https://github.com/Anravus/unsupervised-predict-streamlit-template/blob/developing/resources/images/UnsupervisedPredict.pdf', type = 'pdf')
         toc.placeholder()
 
         st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/A%20short%20history.png",
@@ -884,15 +886,24 @@ def main():
         toc3.title("MEET THE TEAM")
 
         toc3.header("Makhosazane Seroka")
+        st.markdown("""
+                    I'm Makhosazane Seroka known as Khosi. Went to Olympus Learning Institute now at Explore Data Science Academy, enjoys going out and socializing an watching movies.
+                    """)
 
         toc3.header("Mixo Lucrencia Shitlhangu")
         st.markdown("""
                     Data Scientist in training with a passion to deliver valuable data through analytical functions as well as data retrieval methods.  My focus, as an aspiring professional,
                     is to utilize my strengths in database management to make a positive impact.
                     """)
-        st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/MixoL.jpg", use_column_width = True)
+        st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/MixoL.jpg",
+                 caption = "'It's a bird! It's a plane! Nope! It's a Data Scientist!!!'- Mixo"use_column_width = True)
 
-        toc3.header("Percy Mokone")
+        toc3.header("Pontsho Mokone")
+        st.markdown("""
+                    A pleasant soul who's inlove with solving real world problems using data and data analysis models. Enjoys exploring many ways in which the world can make use of the
+                    data that is already in abundance, and an enthusiastic bookworm too.
+                    """)
+        st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/Pontsho.png", use_column_width=True)
 
         toc3.header("Precious Sekgathume")
         st.markdown("""
@@ -900,7 +911,8 @@ def main():
                     Science and the Social Sciences for the betterment of her career.. She’s an avid reader, a mental health advocate. She has previously worked closely with children and
                     believes greatly that dream work makes the team work..
                     """)
-        st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/PreciousS.jpeg", use_column_width = True)
+        st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/PreciousS.jpeg",
+                 caption = "'I’m a queen... crowned in code..'- Precious", use_column_width = True)
 
         toc3.header("Sevha Vukeya")
 
