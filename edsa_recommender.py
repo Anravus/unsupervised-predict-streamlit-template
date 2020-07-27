@@ -886,10 +886,21 @@ def main():
         toc3.header("Makhosazane Seroka")
 
         toc3.header("Mixo Lucrencia Shitlhangu")
+        st.markdown("""
+                    Data Scientist in training with a passion to deliver valuable data through analytical functions as well as data retrieval methods.  My focus, as an aspiring professional,
+                    is to utilize my strengths in database management to make a positive impact.
+                    """)
+        st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/MixoL.jpg", use_column_width = True)
 
         toc3.header("Percy Mokone")
 
         toc3.header("Precious Sekgathume")
+        st.markdown("""
+                    A Social Sciences graduate who decided to move out of her comfort zone and took a leap into the Data Science field in January 2020. Precious hope to incorporate Data
+                    Science and the Social Sciences for the betterment of her career.. She’s an avid reader, a mental health advocate. She has previously worked closely with children and
+                    believes greatly that dream work makes the team work..
+                    """)
+        st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/PreciousS.jpeg", use_column_width = True)
 
         toc3.header("Sevha Vukeya")
 
@@ -898,7 +909,8 @@ def main():
                     Innovative and performance-driven Entrepreneur with a deep passion for technology and business. Detail-orientated data science student with a background in Accounting Science.
                     Passionate with a zest for solving problems.
                     """)
-        st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/Suvarna.jpeg", caption = '"Give me speckled eggs and a computer and I can take on the world"- Suvarna', use_column_width=True)
+        st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/Suvarna.jpeg",
+                 caption = '"Give me speckled eggs and a computer and I can take on the world"- Suvarna', use_column_width=True)
 
         toc3.generate()
 
