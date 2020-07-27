@@ -126,7 +126,7 @@ def prediction(movie_title,user_id):
 
 # !! DO NOT CHANGE THIS FUNCTION SIGNATURE !!
 # You are, however, encouraged to change its content.
- def collab_model(movie_list,top_n=10):
+def collab_model(movie_list,top_n=10):
     """Performs Collaborative filtering based upon a list of movies supplied
        by the app user.
 
