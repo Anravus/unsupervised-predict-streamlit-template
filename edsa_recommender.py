@@ -183,8 +183,6 @@ def main():
 
         toc = Toc()
 
-        pdf_display = f'<embed src="https://github.com/Anravus/unsupervised-predict-streamlit-template/blob/developing/resources/images/UnsupervisedPredict.pdf;UnsupervisedPredict,{UnsupervisedPredict_pdf}" width="700" height="1000" type="application/pdf">'
-        #st.file_uploader('https://github.com/Anravus/unsupervised-predict-streamlit-template/blob/developing/resources/images/UnsupervisedPredict.pdf', type = 'pdf')
         toc.placeholder()
 
         st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/A%20short%20history.png",
