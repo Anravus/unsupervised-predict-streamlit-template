@@ -896,7 +896,7 @@ def main():
                     is to utilize my strengths in database management to make a positive impact.
                     """)
         st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/MixoL.jpg",
-                 caption = "'It's a bird! It's a plane! Nope! It's a Data Scientist!!!'- Mixo"use_column_width = True)
+                 caption = "'It's a bird! It's a plane! Nope! It's a Data Scientist!!!'- Mixo", use_column_width = True)
 
         toc3.header("Pontsho Mokone")
         st.markdown("""
