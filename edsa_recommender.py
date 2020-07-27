@@ -121,6 +121,10 @@ def main():
         st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/OurMission.png",
                  use_column_width=True )
 
+        st.sidebar.video("https://www.youtube.com/watch?v=Xm12NSa8jsM")
+        st.sidebar.video("https://www.youtube.com/watch?v=ENPMz4cY1nw")
+        st.sidebar.video("https://www.youtube.com/watch?v=lFzVJEksoDY")
+
         st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/OneFlixS%20(2).png",
                  use_column_width=True)
         st.title("🎬 OneFlix 🎬")
@@ -771,6 +775,10 @@ def main():
         st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/DataExploration.png",
                  use_column_width=True)
 
+        st.sidebar.video("https://www.youtube.com/watch?v=SbXIj2T-_uk")
+        st.sidebar.video("https://www.youtube.com/watch?v=GV_18deeAXk")
+        st.sidebar.video("https://www.youtube.com/watch?v=yDGv4GIR7A4")
+
         st.markdown("""
     <iframe width="600" height="375" src="https://app.powerbi.com/view?r=eyJrIjoiMWQ3YTE1MjgtODQ0My00Mzk0LThhZTAtYmQ5ZmFlNDA4ZmQxIiwidCI6IjQ0MTEyYTBhLTlmN2ItNDNhNi05Y2FhLWY0NTA0NDFmMjlhNSIsImMiOjl9&pageName=ReportSection/" frameborder="0" style="border:0" allowfullscreen></iframe>
     """, unsafe_allow_html=True)
@@ -788,6 +796,10 @@ def main():
     if page_selection == "Our Products and Services":
         st.image("https://raw.githubusercontent.com/Anravus/unsupervised-predict-streamlit-template/developing/resources/images/Products.png",
                  use_column_width=True)
+
+        st.sidebar.video("https://www.youtube.com/watch?v=jqmUoteadZI")
+        st.sidebar.video("https://www.youtube.com/watch?v=wVDtmouV9kM")
+        st.sidebar.video("https://www.youtube.com/watch?v=OqjeOYeG5_A&list=PLFIAL6XASgWZNrf4i_6e3a6D5wxs9ITD8&index=72")
 
         # OneFlix products offered
         st.title("Products and Services offered")
