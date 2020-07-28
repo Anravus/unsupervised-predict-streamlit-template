@@ -54,7 +54,7 @@ def main():
     # you are welcome to add more options to enrich your app.
     # Creating multiple pages
     st.sidebar.title("Menu")
-    page_options = ["Recommender System","Solution Overview","Our Mission","History Of Cinema","Machine Learning","Data Exploration","Our Products and Services","About Us","References"]
+    page_options = ["Recommender System","Our Mission","History Of Cinema","Machine Learning","Data Exploration","Our Products and Services","About Us","References"]
 
     # -------------------------------------------------------------------
     # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
@@ -109,9 +109,9 @@ def main():
     # -------------------------------------------------------------------
 
     # ------------- SAFE FOR ALTERING/EXTENSION -------------------
-    if page_selection == "Solution Overview":
-        st.title("Solution Overview")
-        st.write("Describe your winning approach on this page")
+    #if page_selection == "Solution Overview":
+        #st.title("Solution Overview")
+        #st.write("Describe your winning approach on this page")
 
     # You may want to add more sections here for aspects such as an EDA,
     # or to provide your business pitch.
